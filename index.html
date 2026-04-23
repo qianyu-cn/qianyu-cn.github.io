@@ -31,8 +31,9 @@
     <h2 class="text-2xl font-bold text-sky-700">About</h2>
 
     <p class="mt-3 text-slate-700 leading-relaxed">
-      Web制作を学習中。現在はHTMLを中心に扱い、必要に応じてTailwind CSSも使用することがある。
-      過去に触れた言語やライブラリは量が多く曖昧なため、現在の学習内容に絞って記載している。
+      Web制作を学習中。HTMLを中心にWebページを作成している。<br>
+      UI調整などでTailwind CSSを使用することがある。<br>
+      また、学習目的でReact（CDN版）を試すこともある。
     </p>
   </section>
 
@@ -42,7 +43,9 @@
 
     <div class="mt-4 flex flex-wrap gap-2 text-sm">
       <span class="px-3 py-1 rounded-full bg-sky-50 border border-sky-200">HTML</span>
+      <span class="px-3 py-1 rounded-full bg-sky-50 border border-sky-200">CSS</span>
       <span class="px-3 py-1 rounded-full bg-sky-50 border border-sky-200">Tailwind CSS (occasionally)</span>
+      <span class="px-3 py-1 rounded-full bg-sky-50 border border-sky-200">React (CDN, learning)</span>
     </div>
   </section>
 
@@ -50,21 +53,30 @@
   <section class="bg-white p-6 rounded-3xl card border border-sky-100">
     <h2 class="text-2xl font-bold text-sky-700">Projects</h2>
 
-    <div class="mt-5 p-6 rounded-2xl bg-indigo-50 border border-indigo-100">
-      <h3 class="text-xl font-semibold">ChatGPT風UI チャットアプリ</h3>
+    <div class="mt-5 space-y-4">
 
-      <p class="mt-3 text-slate-700">
-        HTML / CSS / JavaScriptで作成したチャットUIのプロトタイプ。
-        サイドバー・メッセージUI・入力フォームなどの構造を実装。
-      </p>
+      <div class="p-5 rounded-2xl bg-indigo-50 border border-indigo-100">
+        <h3 class="text-lg font-semibold">ChatGPT風UI チャットアプリ</h3>
+        <p class="mt-2 text-slate-700">
+          HTML / CSS / JavaScriptで作成したチャットUIのプロトタイプ。
+          フロントエンドのレイアウト設計とインタラクションを学習目的で実装。
+        </p>
 
-      <div class="mt-3">
-        <a class="text-indigo-600 hover:underline"
+        <a class="text-indigo-600 hover:underline mt-2 inline-block"
            href="https://qianyu-cn.github.io/chatgpt-mock"
            target="_blank">
           デモを見る
         </a>
       </div>
+
+      <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+        <h3 class="text-lg font-semibold">その他の学習プロジェクト</h3>
+        <p class="mt-2 text-slate-700">
+          HTMLやJavaScriptを使った小規模な試作・実験的なコード。
+          学習過程で作成したものを含む。
+        </p>
+      </div>
+
     </div>
   </section>
 
@@ -90,7 +102,7 @@
 </main>
 
 <footer class="text-center py-10 text-slate-500 text-sm">
-  © 2026 Qianyu Yang. Portfolio.
+  © 2026 Qianyu Yang
 </footer>
 
 </body>

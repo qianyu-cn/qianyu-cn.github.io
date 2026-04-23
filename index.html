@@ -1,95 +1,134 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="description" content="中学生のQianyu YangによるWeb制作ポートフォリオ。HTML・CSS・ChatGPTを活用した学習記録と作品紹介。">
-<meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="4U4miU3Gsc0UAXRYGq5Y5ezYuwDvyN93D19iR8COO4E" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qianyu Yang | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Qianyu Yang | Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
 
-    .card-shadow {
-      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.08);
-    }
-  </style>
+<style>
+  body {
+    background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+  }
+  .card-shadow {
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.08);
+  }
+</style>
 </head>
 
 <body class="text-slate-800 leading-relaxed">
-  <header class="py-16 px-6 text-center bg-gradient-to-r from-sky-100 via-white to-emerald-100 border-b border-sky-200">
-    <div class="max-w-4xl mx-auto">
-      <p class="inline-block text-sm px-4 py-1 rounded-full bg-sky-200 text-sky-800 font-medium">
-        ぽってりした中一っぽいポートフォリオ
+
+<header class="py-16 px-6 text-center bg-gradient-to-r from-sky-100 via-white to-emerald-100 border-b border-sky-200">
+  <div class="max-w-4xl mx-auto">
+
+    <p class="inline-block text-sm px-4 py-1 rounded-full bg-sky-200 text-sky-800 font-medium">
+      Web Development Portfolio
+    </p>
+
+    <h1 class="mt-6 text-4xl md:text-5xl font-extrabold">
+      Qianyu Yang
+    </h1>
+
+    <div class="mt-3 text-lg text-slate-600 font-medium">
+      楊 謙鈺
+    </div>
+
+    <p class="mt-4 text-slate-600">
+      中学生 | ChatGPTを活用したWeb開発学習
+    </p>
+
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 py-10 space-y-8">
+
+  <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
+    <h2 class="text-2xl font-bold text-sky-700">About</h2>
+
+    <p class="mt-4 text-slate-700">
+      ChatGPTを活用しながらWebアプリ開発を行っている中学生。
+      UI構築・フロントエンド開発を中心に学習中。
+    </p>
+
+    <div class="mt-4 inline-block px-4 py-2 rounded-2xl bg-sky-50 border border-sky-200 text-sky-700 text-sm">
+      AI-assisted rapid development
+    </div>
+  </section>
+
+  <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
+    <h2 class="text-2xl font-bold text-sky-700">Featured Project</h2>
+
+    <div class="mt-5 p-6 rounded-2xl bg-indigo-50 border border-indigo-100">
+
+      <h3 class="text-xl font-semibold text-slate-800">
+        ChatGPT風UIチャットボットアプリ
+      </h3>
+
+      <p class="mt-3 text-slate-700">
+        ChatGPTライクなUIを再現したフロントエンドチャットアプリ。
+        メッセージUI・入力欄・会話形式のインターフェースを実装。
       </p>
-      <h1 class="mt-6 text-4xl md:text-5xl font-extrabold text-slate-800">
-        Qianyu Yang
-      </h1>
-      <div class="mt-3 text-lg text-slate-600 font-medium">
-        楊 謙鈺
+
+      <div class="mt-3 text-sm text-slate-600">
+        デモ:
+        <a class="text-indigo-600 hover:underline"
+           href="https://qianyu-cn.github.io/chatgpt-mock"
+           target="_blank" rel="noopener noreferrer">
+          qianyu-cn.github.io/chatgpt-mock
+        </a>
       </div>
-      <p class="mt-4 text-slate-600">
-        中学生 | ChatGPTを使って制作 | Webに興味あり
+
+      <div class="mt-4 flex gap-2 flex-wrap">
+        <span class="text-xs px-3 py-1 rounded-full bg-white border border-indigo-200 text-indigo-700">HTML</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-white border border-indigo-200 text-indigo-700">CSS</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-white border border-indigo-200 text-indigo-700">JavaScript</span>
+        <span class="text-xs px-3 py-1 rounded-full bg-white border border-indigo-200 text-indigo-700">UI Clone</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
+    <h2 class="text-2xl font-bold text-sky-700">Other Works</h2>
+
+    <p class="mt-4 text-slate-600">
+      学習・実験用の小規模プロジェクト（GitHubにて公開）
+    </p>
+
+    <div class="mt-3 text-sm text-slate-500">
+      詳細はリポジトリ参照
+    </div>
+  </section>
+
+  <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
+    <h2 class="text-2xl font-bold text-sky-700">Contact</h2>
+
+    <div class="mt-4 space-y-2">
+      <p>
+        Email:
+        <a class="text-sky-600 hover:underline" href="mailto:qianyuyang.vip@gmail.com">
+          qianyuyang.vip@gmail.com
+        </a>
+      </p>
+
+      <p>
+        GitHub:
+        <a class="text-sky-600 hover:underline"
+           href="https://github.com/qianyu-cn"
+           target="_blank">
+          github.com/qianyu-cn
+        </a>
       </p>
     </div>
-  </header>
 
-  <main class="max-w-4xl mx-auto px-6 py-10 space-y-8">
-    <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
-      <h2 class="text-2xl font-bold text-sky-700">About</h2>
-      <p class="mt-4 text-slate-700">
-        ChatGPTが出したコードを使いながらWebサイトやプログラムを作っている中学生。
-        自分で設計するというより、出てきたものを組み合わせて形にしている段階。
-      </p>
-      <div class="mt-4 inline-block px-4 py-2 rounded-2xl bg-sky-50 border border-sky-200 text-sky-700 text-sm">
-        ChatGPT依存型コーディングスタイル(動けばOK方式)
-      </div>
-    </section>
+  </section>
 
-    <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
-      <h2 class="text-2xl font-bold text-sky-700">Workflow</h2>
-      <p class="mt-4 text-slate-700">
-        コードを生成 → コピペ → 実行 → 動けば終了 → 動かなければ修正依頼。
-      </p>
-    </section>
+</main>
 
-    <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
-      <h2 class="text-2xl font-bold text-sky-700">Projects</h2>
+<footer class="text-center py-10 text-slate-500 text-sm">
+  © 2026 Qianyu Yang. ChatGPT-assisted development.
+</footer>
 
-      <div class="mt-5 space-y-4">
-        <div class="p-5 rounded-2xl bg-sky-50 border border-sky-100">
-          <h3 class="text-lg font-semibold text-slate-800">ポートフォリオサイト</h3>
-          <p class="mt-2 text-slate-700">HTMLとCSSで作った自己紹介ページ。</p>
-          <div class="mt-3 flex gap-2 flex-wrap">
-            <span class="text-xs px-3 py-1 rounded-full bg-white border border-sky-200 text-sky-700">HTML</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white border border-sky-200 text-sky-700">CSS</span>
-          </div>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-100">
-          <h3 class="text-lg font-semibold text-slate-800">その他コード</h3>
-          <p class="mt-2 text-slate-700">ChatGPTに生成させたコードを試したもの。公開用ではない。</p>
-          <div class="mt-3 flex gap-2 flex-wrap">
-            <span class="text-xs px-3 py-1 rounded-full bg-white border border-emerald-200 text-emerald-700">Web</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white rounded-3xl p-6 md:p-8 card-shadow border border-sky-100">
-      <h2 class="text-2xl font-bold text-sky-700">Contact</h2>
-      <div class="mt-4 space-y-2 text-slate-700">
-        <p>Email: <a class="text-sky-600 hover:underline" href="mailto:qianyuyang.vip@gmail.com">qianyuyang.vip@gmail.com</a></p>
-        <p>GitHub: <a class="text-sky-600 hover:underline" href="https://github.com/qianyu-cn" target="_blank" rel="noopener noreferrer">https://github.com/qianyu-cn</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="text-center py-10 text-slate-500 text-sm">
-    © 2026 Qianyu Yang. ChatGPT-assisted development.
-  </footer>
 </body>
 </html>

@@ -1,125 +1,152 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CYBER PROFILE</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', monospace;
-      background: radial-gradient(circle at top, #0a0a0a, #000);
-      color: #00fff2;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CLASSIFIED PROFILE // JUNIOR HACKER</title>
+<style>
+:root{
+  --cyan:#00f6ff;
+  --green:#00ff88;
+  --pink:#ff3df2;
+  --bg:#05070a;
+}
 
-    .glitch {
-      font-size: 3rem;
-      text-align: center;
-      margin-top: 60px;
-      position: relative;
-      color: #00fff2;
-      text-shadow: 0 0 10px #00fff2;
-    }
+body{
+  margin:0;
+  font-family: monospace;
+  background: radial-gradient(circle at top, #0a0f14, var(--bg));
+  color:var(--cyan);
+  overflow:hidden;
+}
 
-    .glitch::before,
-    .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-    }
+.scan{
+  position:fixed;
+  inset:0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.04) 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  pointer-events:none;
+  opacity:0.3;
+}
 
-    .glitch::before {
-      animation: glitchTop 2s infinite linear alternate-reverse;
-      color: #ff00ff;
-      top: -2px;
-    }
+.glitch{
+  text-align:center;
+  font-size:2.6rem;
+  margin-top:50px;
+  position:relative;
+  text-shadow:0 0 10px var(--cyan);
+}
 
-    .glitch::after {
-      animation: glitchBottom 1.5s infinite linear alternate-reverse;
-      color: #00ff00;
-      top: 2px;
-    }
+.glitch::before,
+.glitch::after{
+  content:attr(data-text);
+  position:absolute;
+  left:0;
+  width:100%;
+}
 
-    @keyframes glitchTop {
-      0% { clip-path: inset(0 0 90% 0); }
-      50% { clip-path: inset(10% 0 60% 0); }
-      100% { clip-path: inset(0 0 80% 0); }
-    }
+.glitch::before{
+  color:var(--pink);
+  animation: g1 1.3s infinite linear alternate-reverse;
+}
+.glitch::after{
+  color:var(--green);
+  animation: g2 1s infinite linear alternate-reverse;
+}
 
-    @keyframes glitchBottom {
-      0% { clip-path: inset(80% 0 0 0); }
-      50% { clip-path: inset(40% 0 30% 0); }
-      100% { clip-path: inset(70% 0 10% 0); }
-    }
+@keyframes g1{
+  0%{transform:translateX(-2px); clip-path: inset(0 0 70% 0);}
+  50%{transform:translateX(2px); clip-path: inset(20% 0 40% 0);}
+  100%{transform:translateX(-1px); clip-path: inset(0 0 60% 0);}
+}
 
-    .container {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 20px;
-      border: 1px solid #00fff2;
-      box-shadow: 0 0 20px #00fff2;
-      background: rgba(0, 0, 0, 0.6);
-    }
+@keyframes g2{
+  0%{transform:translateX(2px); clip-path: inset(60% 0 0 0);}
+  50%{transform:translateX(-2px); clip-path: inset(30% 0 30% 0);}
+  100%{transform:translateX(1px); clip-path: inset(50% 0 10% 0);}
+}
 
-    .section {
-      margin-bottom: 20px;
-    }
+.container{
+  width:90%;
+  max-width:800px;
+  margin:30px auto;
+  border:1px solid var(--cyan);
+  box-shadow:0 0 20px var(--cyan);
+  padding:20px;
+  background:rgba(0,0,0,0.6);
+}
 
-    .label {
-      color: #ff00ff;
-      font-weight: bold;
-    }
+.tag{
+  color:var(--pink);
+}
 
-    .terminal {
-      background: black;
-      padding: 10px;
-      border: 1px solid #00fff2;
-      font-size: 0.9rem;
-      color: #00ff00;
-      height: 120px;
-      overflow: hidden;
-    }
+.line{
+  margin:10px 0;
+}
 
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      background: #00ff00;
-      animation: blink 1s infinite;
-    }
+.terminal{
+  background:#000;
+  border:1px solid var(--green);
+  padding:10px;
+  height:140px;
+  overflow:hidden;
+  color:var(--green);
+}
 
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-  </style>
+.cursor{
+  display:inline-block;
+  width:8px;
+  height:14px;
+  background:var(--green);
+  animation:blink .8s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0;}
+}
+
+.hint{
+  font-size:0.8rem;
+  opacity:0.7;
+}
+
+</style>
 </head>
 <body>
 
-  <div class="glitch" data-text="CYBER PROFILE">CYBER PROFILE</div>
+<div class="scan"></div>
 
-  <div class="container">
-    <div class="section">
-      <span class="label">NAME:</span> Qianyu.exe
-    </div>
-    <div class="section">
-      <span class="label">ROLE:</span> MIDDLE SCHOOL STUDENT / HACKER
-    </div>
-    <div class="section">
-      <span class="label">STATUS:</span> ONLINE // CSS occasionally breaks
-    </div>
-    <div class="section">
-      <span class="label">SKILLS:</span> HTML | CSS | JavaScript | Debugging reality
-    </div>
+<div class="glitch" data-text="JUNIOR HACKER FILE">JUNIOR HACKER FILE</div>
 
-    <div class="section terminal">
-      > booting profile...<br>
-      > loading skills...<br>
-      > warning: style instability detected<br>
-      > system ready<span class="cursor"></span>
-    </div>
-  </div>
+<div class="container">
+
+  <div class="line"><span class="tag">NAME:</span> Qianyu.exe</div>
+  <div class="line"><span class="tag">AGE:</span> 12 // MIDDLE SCHOOL UNIT</div>
+  <div class="line"><span class="tag">STATUS:</span> ONLINE (school Wi-Fi unstable)</div>
+  <div class="line"><span class="tag">ROLE:</span> JUNIOR WEB HACKER / FRONTEND DEV</div>
+  
+  <div class="line"><span class="tag">SKILLS:</span></div>
+  <div class="line hint">HTML injection (harmless), CSS breaking, JavaScript curiosity</div>
+  <div class="line hint">GitHub commits (too many)</div>
+  <div class="line hint">README file manipulation (aesthetic only)</div>
+
+  <div class="line"><span class="tag">MISSION:</span> "Make websites cooler than textbooks"</div>
+
+  <pre class="terminal">
+> boot sequence: student profile  
+> loading school constraints...  
+> warning: homework queue detected  
+> bypassing boredom module...  
+> system ready <span class="cursor"></span>
+  </pre>
+
+</div>
 
 </body>
 </html>

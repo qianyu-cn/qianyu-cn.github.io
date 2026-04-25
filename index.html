@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CLASSIFIED PROFILE // JUNIOR HACKER</title>
+
 <style>
 :root{
   --cyan:#00f6ff;
@@ -35,12 +35,21 @@ body{
   opacity:0.3;
 }
 
+body::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle, transparent 60%, rgba(0,0,0,0.7));
+  pointer-events:none;
+}
+
 .glitch{
   text-align:center;
   font-size:2.6rem;
   margin-top:50px;
   position:relative;
   text-shadow:0 0 10px var(--cyan);
+  animation: boot 0.8s ease-out;
 }
 
 .glitch::before,
@@ -53,23 +62,20 @@ body{
 
 .glitch::before{
   color:var(--pink);
-  animation: g1 1.3s infinite linear alternate-reverse;
+  animation: glitchRand 2s infinite;
 }
 .glitch::after{
   color:var(--green);
-  animation: g2 1s infinite linear alternate-reverse;
+  animation: glitchRand 1.6s infinite reverse;
 }
 
-@keyframes g1{
-  0%{transform:translateX(-2px); clip-path: inset(0 0 70% 0);}
-  50%{transform:translateX(2px); clip-path: inset(20% 0 40% 0);}
-  100%{transform:translateX(-1px); clip-path: inset(0 0 60% 0);}
-}
-
-@keyframes g2{
-  0%{transform:translateX(2px); clip-path: inset(60% 0 0 0);}
-  50%{transform:translateX(-2px); clip-path: inset(30% 0 30% 0);}
-  100%{transform:translateX(1px); clip-path: inset(50% 0 10% 0);}
+@keyframes glitchRand {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, 2px); }
+  80% { transform: translate(3px, 0px); }
+  100% { transform: translate(0); }
 }
 
 .container{
@@ -80,6 +86,7 @@ body{
   box-shadow:0 0 20px var(--cyan);
   padding:20px;
   background:rgba(0,0,0,0.6);
+  animation: boot 0.8s ease-out;
 }
 
 .tag{
@@ -90,6 +97,11 @@ body{
   margin:10px 0;
 }
 
+.hint{
+  font-size:0.8rem;
+  opacity:0.7;
+}
+
 .terminal{
   background:#000;
   border:1px solid var(--green);
@@ -97,6 +109,7 @@ body{
   height:140px;
   overflow:hidden;
   color:var(--green);
+  white-space:pre-wrap;
 }
 
 .cursor{
@@ -111,13 +124,14 @@ body{
   50%{opacity:0;}
 }
 
-.hint{
-  font-size:0.8rem;
-  opacity:0.7;
+@keyframes boot {
+  from { opacity: 0; transform: translateY(10px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
 </style>
 </head>
+
 <body>
 
 <div class="scan"></div>
@@ -132,13 +146,13 @@ body{
   <div class="line"><span class="tag">ROLE:</span> JUNIOR WEB HACKER / FRONTEND DEV</div>
   
   <div class="line"><span class="tag">SKILLS:</span></div>
-  <div class="line hint">HTML injection (harmless), CSS breaking, JavaScript curiosity</div>
-  <div class="line hint">GitHub commits (too many)</div>
-  <div class="line hint">README file manipulation (aesthetic only)</div>
+  <div class="line hint">HTML injection → LOW RISK MODULE</div>
+  <div class="line hint">CSS breaking → HIGH STYLING AUTHORITY</div>
+  <div class="line hint">JavaScript curiosity → UNSTABLE FEATURE FLAG</div>
 
   <div class="line"><span class="tag">MISSION:</span> "Make websites cooler than textbooks"</div>
 
-  <pre class="terminal">
+  <pre class="terminal" id="terminal">
 > boot sequence: student profile  
 > loading school constraints...  
 > warning: homework queue detected  
@@ -147,6 +161,22 @@ body{
   </pre>
 
 </div>
+
+<script>
+const terminal = document.getElementById("terminal");
+const text = terminal.innerText;
+terminal.innerText = "";
+
+let i = 0;
+function type(){
+  if(i < text.length){
+    terminal.innerHTML += text[i];
+    i++;
+    setTimeout(type, 18);
+  }
+}
+type();
+</script>
 
 </body>
 </html>
